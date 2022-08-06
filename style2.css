@@ -81,8 +81,7 @@ main {
     }
 }
 
-.menu .title h1 {
-    white-space: nowrap;
+.title h1 {
     text-overflow: ellipsis;
     overflow: hidden;
     font-family: 'Shrikhand';
@@ -122,8 +121,7 @@ main {
 #carte {
     display: flex;
     margin-top: 20px;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
     transform-origin: top;
     background-color: white;
     border-radius: 17px;
@@ -145,6 +143,9 @@ main {
 }
 .title_description {
     width: 85%;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    
 }
 .circle_check {
     position: relative;
@@ -154,14 +155,11 @@ main {
     top: 17px;
 }
 .selector {
-    
-    background-color: #99e2d0;
-    margin: -8% -20% 0rem 2rem;
-    width: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition-duration: .5s;
+    overflow: hidden;
+    background: #99E2D0;
+    width: 0;
+    transition: width 0.5s;
+    padding-top: 0px;;
     
 }
 .circle_check i {
@@ -171,14 +169,16 @@ main {
 }
 #carte:hover {
     cursor: pointer;
+    overflow: hidden;
 }
 #carte:hover > .selector {
-    margin-right: 0px;
+    width: 70px;
+    right: 0;
 }
 #carte:hover > .selector .circle_check i {
     
     transform: rotate(360deg);
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 .name   {
     display: flex;
@@ -200,13 +200,16 @@ main {
     overflow: hidden;
     white-space: nowrap;
 }
+.circle_price {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .price {
     
-
-}
-.price p {
-    margin-top: 32px;
-    margin-left: 0px;
+    margin-top: 30px;
+    
 }
 .button_commander {
     display: flex;
@@ -263,11 +266,15 @@ footer {
     margin-bottom: 5px;
     list-style: none;
 }
-@media screen and (min-width:1000px) {
+
+@media screen and (min-width:1120px) {
     .menu_card {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
+    }
+    #carte {
+        overflow: hidden;
     }
 }
 @media screen and (min-width: 1250px) {
