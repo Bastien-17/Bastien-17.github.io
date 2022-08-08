@@ -23,6 +23,7 @@ header .back_button {
     width: 180px;
 }
 .back_button button {
+    margin-left: 20px;
     cursor: pointer;
     border: none;
     background: none;
@@ -36,25 +37,25 @@ header .back_button {
 }
 .background_img img {
     width: 100%;
-    height: 500px;
+    height: 300px;
     object-fit: cover;
     z-index: 1;
 }
 main {
-    display: flex;
+    
     justify-content: center;
     position: relative;
-    
+    width: 100%;
 }
 .container_menu {
-   
+   width: auto;
     
 }
 .menu {
     position: relative;
     margin-top: -80px;
     background-color: #f6f6f6;
-    width: 1250px;
+    
     border-radius: 30px 30px 0 0;
     z-index: 0;
     
@@ -64,11 +65,25 @@ main {
     border-radius: 30px 30px 0 0;
     margin-left: 20px;
     margin-right: 20px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     top: 20px;
-    grid-template-columns: 1fr 1fr 1fr;
+    
 }
-.menu .title h1 {
+@keyframes appear {
+    0% {
+        transform: translatey(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translatey(0);
+        opacity: 1;
+    }
+}
+
+.title h1 {
+    text-overflow: ellipsis;
+    overflow: hidden;
     font-family: 'Shrikhand';
     padding-top: 30px;
     margin-left: 20px;
@@ -103,57 +118,95 @@ main {
 .title_dessert h2 {
     margin-bottom: 2px;
 }
-.cartes {
+#carte {
+    display: flex;
     margin-top: 20px;
+    overflow: hidden;
+    transform-origin: top;
     background-color: white;
     border-radius: 17px;
-    width: 95%;
-    height: 80px;
+    width: 100%;
+    height: 60px;
     box-shadow: 0px 0px 6px 0px #0000002e;
 }
-.circle_check {
-    display: none;
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    top: -80px;
-    font-size: 25px;
-    margin-right: 10px;
+.cartes1 {
+    animation: appear 1s;
 }
-.circle_check i {
-    display: none;
+.cartes2 {
+    animation: appear 1.2s;
 }
-.cartes:hover {
-    cursor: pointer;
+.cartes3 {
+    animation: appear 1.4s;
+}
+.title_description {
+    width: 85%;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
     
 }
-.cartes:hover > .circle_check i {
-    color: #9356DC;
+.circle_check {
+    position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 17px;
+}
+.selector {
+    overflow: hidden;
+    background: #99E2D0;
+    width: 0;
+    transition: width 0.5s;
+    padding-top: 0px;;
+    
+}
+.circle_check i {
+    color: white;
+    font-size: 25px;
+    
+}
+#carte:hover {
+    cursor: pointer;
+    overflow: hidden;
+}
+#carte:hover > .selector {
+    width: 70px;
+    right: 0;
+}
+#carte:hover > .selector .circle_check i {
+    
+    transform: rotate(360deg);
+    transition-duration: 0.5s;
 }
 .name   {
     display: flex;
-    
+    font-size: 14px;
 }
 .name h3 {
     margin-left: 10px;
     margin-bottom: 0;
+    margin-top: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .description p {
+    font-size: 14px;
     margin-left: 10px;
     margin-top: 0;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
-.price p {
+.circle_price {
+    width: 20%;
     display: flex;
-    justify-content: flex-end;
-    top: -35px;
-    position: relative;
-    margin-right: 10px;
-    font-weight: bold;
-    padding-left: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.price {
+    
+    margin-top: 30px;
+    
 }
 .button_commander {
     display: flex;
@@ -184,7 +237,7 @@ footer {
     background-color: #353535;
 }
 .footer_container {
-    margin: 0 0 0 15%;
+    margin: 0 0 0 10%;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
@@ -210,24 +263,30 @@ footer {
     margin-bottom: 5px;
     list-style: none;
 }
-@media screen and (max-width: 1050px ) {
+
+@media screen and (min-width:1120px) {
     .menu_card {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    #carte {
+        overflow: hidden;
+    }
+}
+@media screen and (min-width: 1250px) {
+    .menu {
+        position: relative;
+        margin-top: -80px;
+        width: 1250px; 
+    }
+    main {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        position: relative;
     }
-}
-@media screen and (max-width:700px) {
-    .back_button {
-        margin-left: 15px;        
+    .footer_container {
+        margin: 0 0 0 17%;
     }
-}
-@media screen and (max-width: 400px) {
-    .back_button {
-        margin-left: 20px;
-    }
-}
-@media screen and (max-width: 350px) {
-    .background_img {
-       
-    }
+    
 }
