@@ -19,7 +19,6 @@ header .back_button {
     margin-right: 95%;
 }
 .logo img {
-    
     width: 180px;
 }
 .back_button button {
@@ -42,23 +41,19 @@ header .back_button {
     z-index: 1;
 }
 main {
-    
     justify-content: center;
     position: relative;
     width: 100%;
 }
 .container_menu {
    width: auto;
-    
 }
 .menu {
     position: relative;
     margin-top: -80px;
     background-color: #f6f6f6;
-    
     border-radius: 30px 30px 0 0;
-    z-index: 0;
-    
+    z-index: 0;   
 }
 .menu_card {
     background-color: #f6f6f6;
@@ -68,8 +63,8 @@ main {
     display: flex;
     flex-direction: column;
     top: 20px;
-    
 }
+
 @keyframes appear {
     0% {
         transform: translatey(50%);
@@ -145,7 +140,6 @@ main {
     width: 85%;
     overflow-y: hidden;
     text-overflow: ellipsis;
-    
 }
 .circle_check {
     position: relative;
@@ -160,12 +154,10 @@ main {
     width: 0;
     transition: width 0.5s;
     padding-top: 0px;;
-    
 }
 .circle_check i {
     color: white;
     font-size: 25px;
-    
 }
 #carte:hover {
     cursor: pointer;
@@ -176,7 +168,6 @@ main {
     right: 0;
 }
 #carte:hover > .selector .circle_check i {
-    
     transform: rotate(360deg);
     transition-duration: 0.5s;
 }
@@ -203,13 +194,12 @@ main {
 .circle_price {
     width: 20%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-right: 10px;
     align-items: center;
 }
 .price {
-    
     margin-top: 30px;
-    
 }
 .button_commander {
     display: flex;
@@ -229,13 +219,9 @@ main {
     color: white;
 }
 button:hover {
-    transform: scale(1.1);
+    opacity: 0.9;
     transition: 0.35s;
 }
-
-
-
-
 footer {
     background-color: #353535;
 }
