@@ -21,7 +21,7 @@ header .back_button {
 .logo img {
     width: 180px;
 }
-.back_button button {
+.back_button i {
     margin-left: 20px;
     cursor: pointer;
     border: none;
@@ -29,7 +29,7 @@ header .back_button {
     font-size: 30px;
     color: grey;
 }
-.back_button button:hover {
+.back_button i:hover {
     transform-origin: right;
     transform: scale(1.2);
     transition: 0.2s;
@@ -113,7 +113,7 @@ main {
 .title_dessert h2 {
     margin-bottom: 2px;
 }
-#carte {
+.carte {
     display: flex;
     margin-top: 20px;
     overflow: hidden;
@@ -124,17 +124,35 @@ main {
     height: 60px;
     box-shadow: 0px 0px 6px 0px #0000002e;
 }
-.cartes1 {
+#cartes1 {
     animation: appear 1s;
 }
-.cartes2 {
+#cartes2 {
     animation: appear 1.2s;
 }
-.cartes3 {
+#cartes3 {
     animation: appear 1.4s;
 }
-.cartes4 {
+#cartes4 {
     animation: appear 1.6s;
+}
+#cartes5 {
+    animation: appear 1s;
+}
+#cartes6 {
+    animation: appear 1.2s;
+}
+#cartes7 {
+    animation: appear 1.4s;
+}
+#cartes8 {
+    animation: appear 1s;
+}
+#cartes9 {
+    animation: appear 1.2s;
+}
+#cartes10 {
+    animation: appear 1.4s;
 }
 .title_description {
     width: 85%;
@@ -159,15 +177,15 @@ main {
     color: white;
     font-size: 25px;
 }
-#carte:hover {
+.carte:hover {
     cursor: pointer;
     overflow: hidden;
 }
-#carte:hover > .selector {
+.carte:hover > .selector {
     width: 70px;
     right: 0;
 }
-#carte:hover > .selector .circle_check i {
+.carte:hover > .selector .circle_check i {
     transform: rotate(360deg);
     transition-duration: 0.5s;
 }
