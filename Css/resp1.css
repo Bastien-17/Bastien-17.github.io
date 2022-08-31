@@ -1,0 +1,30 @@
+@media screen and (min-width: 450px) {
+    .carte {
+        width: 95%;
+    }
+}
+@media screen and (min-width: 900px) {
+    .explane_cards {
+        flex-direction: row;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+    
+}
+@media screen and (min-width: 1250px) {
+    .restaurant_container {
+        margin-left: 17%;
+        margin-right: 17%;
+    }
+    .explane {
+        margin-left: 17%;
+        margin-right: 17%;
+    }
+    .footer_container {
+        margin-left: 17%;
+        margin-right: 17%;
+    }
+}

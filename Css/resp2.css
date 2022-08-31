@@ -1,0 +1,26 @@
+@media screen and (min-width:1120px) {
+    .menu_card {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    #carte {
+        overflow: hidden;
+    }
+}
+@media screen and (min-width: 1250px) {
+    .menu {
+        position: relative;
+        margin-top: -80px;
+        width: 1250px; 
+    }
+    main {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    .footer_container {
+        margin: 0 0 0 17%;
+    }
+    
+}

@@ -1,8 +1,298 @@
-
 body {
     margin: 0;
     font-family: 'Roboto';
 }
+header {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+header .logo  {
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+    position: relative;
+}
+header .back_button {
+    display: flex;
+    z-index: 1;
+    position: absolute;
+    margin-right: 95%;
+    top: -5px;
+}
+.logo img {
+    width: 180px;
+}
+.back_button i {
+    margin-left: 40px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 25px;
+    color: black;
+}
+.back_button i:hover {
+    transform-origin: right;
+    transform: scale(1.2);
+    transition: 0.2s;
+}
+.background_img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    z-index: 1;
+}
+main {
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+.container_menu {
+   width: auto;
+}
+.menu {
+    position: relative;
+    margin-top: -80px;
+    background-color: #f6f6f6;
+    border-radius: 30px 30px 0 0;
+    z-index: 0;   
+}
+.menu_card {
+    background-color: #f6f6f6;
+    border-radius: 30px 30px 0 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    top: 20px;
+}
+
+@keyframes appear {
+    0% {
+        transform: translatey(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translatey(0);
+        opacity: 1;
+    }
+}
+
+.title h1 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: 'Shrikhand';
+    padding-top: 30px;
+    margin-left: 20px;
+}
+.icon_heart {
+    font-size: 40px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -60px;
+    margin-right: 20px;
+}
+.icon_heart i {
+    font-size: 30px;
+}
+.title_entrée {
+    margin: 0;
+}
+.title_entrée h2 {
+    margin-bottom: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+.border {
+    border-bottom: 3px solid #99E2D0;
+    width: 40px;
+    margin-top: 0;
+}
+.title_plat {
+    margin: 0;
+}
+.title_plat h2 {
+    margin-bottom: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 15px;
+}
+.title_dessert {
+    margin: 0;
+}
+.title_dessert h2 {
+    margin-bottom: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 15px;
+}
+.carte {
+    display: flex;
+    margin-top: 20px;
+    overflow: hidden;
+    transform-origin: top;
+    background-color: white;
+    border-radius: 17px;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0px 0px 6px 0px #0000002e;
+}
+#cartes1 {
+    animation: appear 1s;
+}
+#cartes2 {
+    animation: appear 1.2s;
+}
+#cartes3 {
+    animation: appear 1.4s;
+}
+#cartes4 {
+    animation: appear 1.6s;
+}
+#cartes5 {
+    animation: appear 1s;
+}
+#cartes6 {
+    animation: appear 1.2s;
+}
+#cartes7 {
+    animation: appear 1.4s;
+}
+#cartes8 {
+    animation: appear 1s;
+}
+#cartes9 {
+    animation: appear 1.2s;
+}
+#cartes10 {
+    animation: appear 1.4s;
+}
+.title_description {
+    width: 85%;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+}
+.circle_check {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+}
+.selector {
+    overflow: hidden;
+    background: #99E2D0;
+    width: 0;
+    transition: width 0.5s;
+    padding-top: 0px;;
+}
+.circle_check i {
+    color: white;
+    font-size: 20px;
+}
+.carte:hover {
+    cursor: pointer;
+    overflow: hidden;
+}
+.carte:hover > .selector {
+    width: 70px;
+    right: 0;
+}
+.carte:hover > .selector .circle_check i {
+    transform: rotate(360deg);
+    transition-duration: 0.5s;
+}
+.name   {
+    display: flex;
+    font-size: 14px;
+}
+.name h3 {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.description p {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.circle_price {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    align-items: center;
+}
+.price {
+    margin-top: 30px;
+}
+.price p {
+    font-weight: bold;
+}
+.button_commander {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-bottom: 50px
+}
+.button_commander button {
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 6px 0px #0000002e;
+    background: linear-gradient(0deg, #9356DC, #FF79DA);
+    border: none;
+    height: 43px;
+    width: 150px;
+    color: white;
+}
+.button_commander button:hover {
+    opacity: 0.8;
+    transition: 0.35s;
+}
+footer {
+    background-color: #353535;
+}
+.footer_container {
+    margin: 0 0 0 10%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.footer_logo {
+    font-family: 'Shrikhand';
+    font-size: 18px;
+    color: white;
+    margin-left: 0;
+}
+.footer_list {
+    padding: 0;
+}
+.footer_list a {
+    color: white;
+    text-decoration: none;
+}
+.footer_list li i {
+    margin-right: 10px;
+    
+}
+.footer_list li {
+    margin-bottom: 5px;
+    list-style: none;
+}
+
+
+
+
+
+
+
 .lds-ellipsis {
     background-color: #f6f6f6;
     opacity: 0.9;
@@ -77,7 +367,7 @@ body {
       
 header {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     box-shadow: 0 0 4px 0 grey;
     position: relative;
 }
@@ -85,21 +375,22 @@ header .logo {
     text-align: center;
 }
 .logo img {
-    width: 180px;
+    width: 140px;
 }
 .localisation {
     background-color: #eaeaea;
-    height: 60px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .icon_locate {
-    font-size: 20px;
+    font-size: 15px;
 }
 .locate {
     margin-left: 15px;
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: bold;
 }
 .explorer {
     padding-bottom: 20px;
@@ -110,19 +401,29 @@ header .logo {
 }
 .button {
     border-radius: 25px;
-    font-size: 17px;
     color: white;
     height: 43px;
     background-color: #686868;
     background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
     border: transparent;
-    box-shadow: 0px 0px 6px 0px #0000002e;
+    box-shadow: 1px 2px 6px 2px #0000002e;
     padding: 0 20px 0 20px;
     cursor: pointer;
+    margin-bottom: 30px;
 }
 .button:hover {
     opacity: 0.9;
     transition: 0.35s;
+}
+.explorer_title {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.explorer_title h1 {
+    margin-bottom: 10px;
+}
+.explorer_text p {
+    margin: 0 15px 25px 15px;
 }
 .explane {
     margin-left: 10px;
@@ -137,6 +438,10 @@ header .logo {
 .explane_title {
    display: flex;
    margin-left: 10px;
+   margin-top: 20px;
+}
+.explane_title h2 {
+    margin-bottom: 0;
 }
 .explane_cards {
     display: flex;
@@ -144,9 +449,10 @@ header .logo {
     justify-content: center;
     row-gap: 20px;
     padding: 0;
-    margin: 0;
+    margin-bottom: 40px;
+    counter-reset: compteList ;
 }
-.carte:before {
+.cartes:before {
     counter-increment: compteList 1;
     content: counter(compteList)" ";
     background-color: #9356dc;
@@ -160,19 +466,23 @@ header .logo {
     position: relative;
     left: -12px;
 }
-.carte {
+.cartes {
     color: #686868;
     margin: 0 20px 0 20px;
     background-color: #f6f6f6;
     border-radius: 15px;
     height: 60px;
     width: 90%;
-    box-shadow: 0 3px 3px 0 #0000002e;
-    list-style: none;
-    counter-reset: compteListe;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 13%);
+}
+.cartes i {
+    padding: 10px 10px;
 }
 #card_3 {
     background: #f2eafb;
+}
+#card_3 i {
+    color: #9356dc;
 }
 li {
     display: flex;
@@ -180,6 +490,9 @@ li {
 }
 .explane_text {
     margin-left: 10px;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
 }
 main {
     background-color: #f6f6f6;
@@ -195,10 +508,15 @@ main {
 .container {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 15px;
+    margin-bottom: 20px;
 }
 .restaurant_title {
     margin-top: 20px;
+}
+.restaurants_cards {
+    box-shadow: 1px 1px 8px 1px #0000002e;
+    border-radius: 20px;
 }
 .restaurants_cards a {
     text-decoration: none;
@@ -221,11 +539,11 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 20px;
+    
 }
 
 .restaurants_text .btn_1 {
-    height: 6.9%;
+    
     margin-right: 10px;
     font-size: 35px;
     cursor: pointer;
@@ -242,9 +560,16 @@ main {
 .btn_1 {
     position: absolute;
     z-index: 1;
+
 }
 .btn_2 {
     z-index: 0;
+}
+.btn_1 i {
+    font-size: 30px;
+}
+.btn_2 i {
+    font-size: 30px;
 }
 .btn:hover>.btn_1 {
     transition: 0.5s;
@@ -252,12 +577,13 @@ main {
 }
 .btn:hover>.btn_2 {
     transition: 0.5s;
-    background: linear-gradient(0deg,#9356dc,#ff79da);
+    background: linear-gradient(240deg,#9356dc,#ff79da);
     -webkit-background-clip: text;
     color: transparent;
 }
 .text_container h3 {
     font-size: 16px;
+    font-weight: 900;
     margin: 10px 0 10px 10px;
 }
 .text_container p {
@@ -270,23 +596,27 @@ main {
 }
 .new_1 {
     background-color: #99e2d0;
-    color: #1b6150;
-    padding: 0.5rem;
+    color: #008766;
+    padding: 5px 10px 5px 10px;
     border-radius: 0.125rem;
     position: absolute;
     display: flex;
     margin-top: 10px;
     margin-right: 10px;
+    font-size: 12px;
+    font-weight: bold;
 }
 .new_2 {
     background-color: #99e2d0;
-    color: #1b6150;
-    padding: 0.5rem;
+    color: #008766;
+    padding: 5px 10px 5px 10px;
     border-radius: 0.125rem;
     position: absolute;
     display: flex;
     margin-top: 10px;
     margin-right: 10px;
+    font-size: 12px;
+    font-weight: bold;
 }
 footer {
     background-color: #353535;
@@ -317,33 +647,6 @@ footer {
     padding-left: 0px;
 }
 
-@media screen and (min-width: 450px) {
-    .carte {
-        width: 95%;
-    }
-}
-@media screen and (min-width: 900px) {
-    .explane_cards {
-        flex-direction: row;
-    }
-    .container {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 20px;
-    }
-    
-}
-@media screen and (min-width: 1250px) {
-    .restaurant_container {
-        margin-left: 17%;
-        margin-right: 17%;
-    }
-    .explane {
-        margin-left: 17%;
-        margin-right: 17%;
-    }
-    .footer_container {
-        margin-left: 17%;
-        margin-right: 17%;
-    }
-}
+
+
+
