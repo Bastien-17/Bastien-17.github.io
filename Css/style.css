@@ -54,7 +54,8 @@ main {
     margin-top: -80px;
     background-color: #f6f6f6;
     border-radius: 30px 30px 0 0;
-    z-index: 0;   
+    z-index: 0; 
+    width: 100%;  
 }
 .menu_card {
     background-color: #f6f6f6;
@@ -76,7 +77,12 @@ main {
         opacity: 1;
     }
 }
-
+.title_heart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+}
 .title h1 {
     text-overflow: ellipsis;
     overflow: hidden;
@@ -86,10 +92,8 @@ main {
 }
 .icon_heart {
     font-size: 40px;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: -60px;
-    margin-right: 20px;
+    width: 30px;
+    margin-top: 15px;
 }
 .icon_heart i {
     font-size: 30px;
